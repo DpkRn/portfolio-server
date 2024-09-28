@@ -7,12 +7,12 @@ const cookieParser = require('cookie-parser')
 const {verifyToken,} = require('./middleware/VerifyToken.js')
 require('./db/Connection.js')
 app.use(cors({
-     origin:'http://localhost:5173',
+     origin:'https://portfolio-woad-three-81.vercel.app/',
      credentials:true
 }))
-// app.options(['http://localhost:5173'],cors())
+// app.options('https://portfolio-woad-three-81.vercel.app/',cors())
 app.use(express.json())
-app.use(cookieParser())
+app.use(cookieParser())     
 
 
 app.use('/api/auth',loginRouter)
