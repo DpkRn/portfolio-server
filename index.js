@@ -8,6 +8,7 @@ const {verifyToken,} = require('./middleware/VerifyToken.js')
 require('./db/Connection.js')
 app.use(cors({
      origin:'https://portfolio-woad-three-81.vercel.app/',
+     methods:['GET','POST','DELETE','PUT'],
      credentials:true
 }))
 // app.options('https://portfolio-woad-three-81.vercel.app/',cors())

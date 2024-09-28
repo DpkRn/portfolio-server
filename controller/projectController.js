@@ -2,6 +2,7 @@ const Project = require("../model/Project");
 
 //get all projects
 const getAllProject = async (req, res) => {
+  console.log("getting project")
   try {
     const projects = await Project.find();
     if (!projects||projects.length===0) {
