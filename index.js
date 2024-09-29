@@ -9,7 +9,7 @@ require('./db/Connection.js')
 app.use(cors({
      origin:'https://portfolio-woad-three-81.vercel.app/',
      methods:['GET','POST','DELETE','PUT'],
-     credentials:false
+     credentials:true
 }))
 // app.options('https://portfolio-woad-three-81.vercel.app/',cors())
 app.use(express.json())
