@@ -6,6 +6,20 @@ const cors=require('cors')
 const cookieParser = require('cookie-parser')
 const {verifyToken,} = require('./middleware/VerifyToken.js')
 require('./db/Connection.js')
+
+
+const mongoose=require('mongoose')
+const dotenv=require('dotenv')
+dotenv.config()
+
+const db_url=process.env.DATABASE_URL
+mongoose.connect(db_url).then(()=>{
+    console.log("Connection done")
+}).catch(err=>{
+    console.log(err)
+})
+
+
 app.use(cors({
      origin:'https://portfolio-woad-three-81.vercel.app/',
      methods:['GET','POST','DELETE','PUT'],
