@@ -49,6 +49,7 @@ const editProject = async (req, res) => {
 //add project
 const addProject = async (req, res) => {
   const { title, description, projectType } = req.body;
+  
   try {
     const project = await Project.create({ title, description, projectType });
   
